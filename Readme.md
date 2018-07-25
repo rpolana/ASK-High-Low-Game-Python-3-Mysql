@@ -8,7 +8,54 @@ The primary reason for using an aws managed mysql db public instance in stead of
 
 Same model json as the original, as specified below:
 ```
-Give examples
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "high low game",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "NumberGuessIntent",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{number}",
+            "is it {number}",
+            "how about {number}",
+            "could be {number}"
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 
 ## Instructions
