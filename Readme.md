@@ -1,10 +1,8 @@
 # High low game Alexa skill with SDK 2 and python 3 lambda using aws mysql db for persistence
 
-Works as a starter with ASK SDK 2 and python 3 lambda using mysql db.  Derived from [standard High Low Game sample](https://github.com/alexa-labs/alexa-skills-kit-sdk-for-python/tree/master/samples/HighLowGame) which uses python 2.7 and Dynamo DB.  Changed to en-IN for purpose of testing in India. I also changed the lambda handlers to traditional class style in stead of decorators style.
+Can be used as a starter with ASK SDK 2 and python 3 lambda using mysql db.  Derived from [standard High Low Game sample](https://github.com/alexa-labs/alexa-skills-kit-sdk-for-python/tree/master/samples/HighLowGame) which uses python 2.7 and Dynamo DB.  Changed to en-IN for purpose of testing in India. I also changed the lambda handlers to traditional class style in stead of decorators style.
 
-## TODO
-
-Better organize the handler classes and separate DB code into another file.
+The primary reason for using an aws managed mysql db public instance in stead of the dynamo db in the standard implementation is that the backend can then be used for same skills in google home or other voice assistants.
 
 ## Interaction model
 
@@ -13,10 +11,10 @@ Same model json as the original, as specified below:
 Give examples
 ```
 
-## Usage
+## Instructions
 
 1. Clone this repository in a newly created project folder
-2. Change to the subdirectory lambda/use-east-1_high_low_game_py3 under the project folder.  Setup ask-sdk in local machine in a this subdirectory following instructions in [original repository](https://github.com/alexa-labs/alexa-skills-kit-sdk-for-python/tree/master/samples/HighLowGame).  Copy the high_low_game.py source code file project root folder to this subdirectory too.
+2. Change to the subdirectory lambda/use-east-1_high_low_game_py3 under the project folder.  Setup ask-sdk in local machine in a this subdirectory following instructions in [original repository](https://github.com/alexa-labs/alexa-skills-kit-sdk-for-python/tree/master/samples/HighLowGame). The high_low_game.py source code file should be already in this subdirectory.
 3. Install pymysql in the same subdirectory as in step 2, using 'pip3 install pymysql'
 4. In the subdirectory, issue 'zip -ru ../../../lambda.zip * ' to create a zip file
 5. Login to developer.amazon.com and go to Alexa skill kit console. Create a new skill following same directions in the [original repository](https://github.com/alexa-labs/alexa-skills-kit-sdk-for-python/tree/master/samples/HighLowGame) with same model as in the original or the one in this repository for en-IN. Build and save the model for the skill.
@@ -33,3 +31,7 @@ MYSQL_DBPASSWORD to the db user password
 
 ## Note
 I had to use the zip file upload method for lambda because, for some reason, ask-cli does not work to upload lambda. It happens after pymysql installation, causing a zip file creation that exhausts all disk space during command 'ask deploy -t lambda' from the project directory.
+
+## TODO
+
+Better organize the handler classes and separate DB code into another file.

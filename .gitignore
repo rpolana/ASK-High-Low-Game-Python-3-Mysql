@@ -2,9 +2,8 @@
 !*/
 !.gitattributes
 !.gitignore
-!readme.md
 !.gitkeep
 !high_low_game.py
+!readme.md
 !Readme.md
-!.gitignore
 !en-IN.json
