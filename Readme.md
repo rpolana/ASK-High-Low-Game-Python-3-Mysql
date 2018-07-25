@@ -16,7 +16,7 @@ Give examples
 ## Usage
 
 1. Clone this repository in a newly created project folder
-2. Change to the subdirectory lambda/use-east-1_high_low_game_py3 under the project folder.  Setup ask-sdk in local machine in a this subdirectory following instructions in [original repository](https://github.com/alexa-labs/alexa-skills-kit-sdk-for-python/tree/master/samples/HighLowGame).  This is where the high_low_game.py source code lives too.
+2. Change to the subdirectory lambda/use-east-1_high_low_game_py3 under the project folder.  Setup ask-sdk in local machine in a this subdirectory following instructions in [original repository](https://github.com/alexa-labs/alexa-skills-kit-sdk-for-python/tree/master/samples/HighLowGame).  Copy the high_low_game.py source code file project root folder to this subdirectory too.
 3. Install pymysql in the same subdirectory as in step 2, using 'pip3 install pymysql'
 4. In the subdirectory, issue 'zip -ru ../../../lambda.zip * ' to create a zip file
 5. Login to developer.amazon.com and go to Alexa skill kit console. Create a new skill following same directions in the [original repository](https://github.com/alexa-labs/alexa-skills-kit-sdk-for-python/tree/master/samples/HighLowGame) with same model as in the original or the one in this repository for en-IN. Build and save the model for the skill.
